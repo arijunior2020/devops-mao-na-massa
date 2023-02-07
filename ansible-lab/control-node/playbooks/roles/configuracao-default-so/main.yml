@@ -1,0 +1,7 @@
+- name: Upgarde de todos os pacotes do S.O
+  yum:
+    name: "*"
+    state: latest
+  yum:
+    name: git
+    state: latest
