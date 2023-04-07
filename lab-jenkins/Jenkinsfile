@@ -28,6 +28,12 @@ pipeline {
         }
         }
 
+        stage('Quality Gate'){
+            steps{
+                waitForQualityGate abortPipeline: true
+            }
+        }
+
         stage('Shutdown dos containers de teste'){
             steps{
             sh 'docker-compose down'
